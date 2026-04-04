@@ -9,8 +9,9 @@ from langchain_core.messages import HumanMessage, AIMessage
 
 # Chat model (industry standard from now on)
 llm = ChatOllama(model="llama3.2:1b")
-print("✅ LLM ready!")
-# {chat_history} will be replaced by actual message objects
+
+
+
 history_template = ChatPromptTemplate.from_messages([
     ("system", "You are a helpful assistant. Answer concisely."),
     MessagesPlaceholder(variable_name="chat_history"),
@@ -30,6 +31,6 @@ filled_history = history_template.invoke({
     "chat_history": history,
     "question": "Which of those fields pays the most?"
 })
-print("\n📌 Type 3 — With conversation history:")
+print("\nType 3 — With conversation history:")
 response3 = llm.invoke(filled_history)
-print("🤖 Answer:", response3.content)
+print("Answer:", response3.content)
