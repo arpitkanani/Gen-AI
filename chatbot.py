@@ -1,15 +1,11 @@
 from langchain_ollama import ChatOllama
-from langchain_core.prompts import (
-    PromptTemplate,
-    ChatPromptTemplate,
-)
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 model=ChatOllama(model="llama3.2:1b")
 
 chat_history=[
-    SystemMessage(content="You are an expert AI assitance in every field of human evolution"),
+    SystemMessage(content="You are an expert AI assitance in every field of knowledge. Answer precisely and concisely."),
 
 ]
 
