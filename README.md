@@ -65,3 +65,26 @@ Document
 
 load method and lazy load function
 
+2. **Text-Splitter:**
+- for get context window size of Prompt we used text splitter in LLM bsased application .
+- It's based on character split , recursive text split , sentence split , paragraph split , code split for different langauge , markdown split.
+
+- character split don't see any context or meaning 
+- but in recursive split gives more contextual split 
+
+3. **Vectore-Store:**
+
+- we have vector store for embeddings store for fast retrival and semantic search
+- FASSI , ChromaDB different different database 
+
+4. **Retrievers:**
+
+- it retrives the document from text splitter or document and find the relevant to the prompt and give rank index to give LLM (rank index we can change).
+- by different method we use retrivers as for datasource we use wikipedia_retrievers or vectorstore_retriever 
+1. and for special retriever method like Maximal marginal relevance(MMR):
+- use for very sementic and different from other sementic output we use this for that we need to se a search_type as mmr and in search_kwargs (k=3/5/6 any index we want and in lambda_mult=0-1 for good 0.5 or near to it is good but for 1 is work as normal sementic_search )
+2. multi-Query retriever:
+- query is ambiguse in given by user then document retriever is not give good o/p so we use this retriever
+3. contextual comparission retreiver:
+- if only one sentence is enough for relevant o/p by LLM instead of whole paragraph then we use this.
+
