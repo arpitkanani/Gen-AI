@@ -1,0 +1,5 @@
+Machine learning is a subset of AI.
+Neural networks are inspired by the human brain.
+FAISS is used for fast similarity search.
+LangChain connects LLMs with external tools.
+RAG combines retrieval with text generation.
