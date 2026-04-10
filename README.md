@@ -36,7 +36,8 @@
 ---
 ### for structured output use pydantic method of python as get structured output from LLM or Chatllm
 
-    
+---
+
 ## RAG (retrieved Augumented generation )
 - so RAG is combination of information and languange generation which is retrived relevent chunks from knowledge and feed user prompt and retrived chunk to LLM and get output from it. by this accurate and Grounded response we get.
 - it is better for privacy.
@@ -46,8 +47,8 @@
 - 
 Everything in LangChain's RAG pipeline uses this standard format:
 Document
-├── page_content  → the actual text string
-└── metadata      → info about the source
+- ├── page_content  → the actual text string
+- └── metadata      → info about the source
                     {"source": "file.pdf", "page": 3}
 
 - TextLoader()
@@ -80,6 +81,7 @@ load method and lazy load function
 4. **Retrievers:**
 
 - it retrives the document from text splitter or document and find the relevant to the prompt and give rank index to give LLM (rank index we can change).
+- it's a runnables one type of cause it used .invoke() method
 - by different method we use retrivers as for datasource we use wikipedia_retrievers or vectorstore_retriever 
 1. and for special retriever method like Maximal marginal relevance(MMR):
 - use for very sementic and different from other sementic output we use this for that we need to se a search_type as mmr and in search_kwargs (k=3/5/6 any index we want and in lambda_mult=0-1 for good 0.5 or near to it is good but for 1 is work as normal sementic_search )
