@@ -2,7 +2,7 @@ from langchain_ollama import ChatOllama
 
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
-model=ChatOllama(model="llama3.2:1b")
+model=ChatOllama(model="llama3.2:3b")
 
 chat_history=[
     SystemMessage(content="You are an expert AI assitance in every field of knowledge. Answer precisely and concisely."),
